@@ -1,0 +1,30 @@
+POST http://127.0.0.1:10001/auth/
+Content-Type: application/json
+Authorization:
+
+ {
+    "username": "Oleg",
+    "password": "P@ssw0rd",
+    "role": "admin"
+}
+
+###
+POST http://127.0.0.1:10001/auth/
+Content-Type: application/json
+
+
+ {
+    "username": "Vadim",
+    "password": "qwerty",
+    "role": "user"
+}
+###
+PUT http://127.0.0.1:10001/auth/
+Content-Type: application/json
+Authorization: JWT_token
+
+{
+  "refresh_token": "JWT_token"
+}
+
+###
